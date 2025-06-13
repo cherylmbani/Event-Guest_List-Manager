@@ -1,0 +1,26 @@
+/* styling the HTML elements*/
+h1{
+    text-align: center;
+    color: red;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    padding:10px;
+}
+/*styling the navigation bar. It has an id="info" hence we use # */
+#info{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+}
+.mylist{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+    padding: 0
+    
+
+}
