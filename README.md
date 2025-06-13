@@ -35,9 +35,6 @@ This is a simple project that allows users to add, manage, and remove guests for
 
 Copyright (c) 2025 Cheryl Mbani
 
-## MIT License
-
-Copyright (c) 2025 Cheryl Mbani
 
 Permission is hereby granted, free of charge, to any person obtaining a copy  
 of this project to use, copy, modify, and distribute it for any purpose.  
