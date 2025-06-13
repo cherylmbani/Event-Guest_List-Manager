@@ -24,3 +24,42 @@ h1{
     
 
 }
+header{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1{
+    font-size: 32px;
+    color:rgb(117, 10, 64);
+    margin-bottom: 15px;
+}
+
+.punchline{
+    font-style: italic;
+    color:bisque;
+    font-size: 15px;
+}
+
+.form-section{
+    background-color: #fff;
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 2, 0.1);
+}
+#guest-name{
+    border:1px dashed #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 20%;
+    margin: 10px 0 15px;
+    color: antiquewhite;
+}
+.form-section button{
+    background-color: #2a2a72;
+    color:#fff;
+    border:none;
+    padding: 10px 20px; /* 10px refers to top and bottom spacing, 20px refers to right and left spacing*/
+    border-radius: 5px;
+}
