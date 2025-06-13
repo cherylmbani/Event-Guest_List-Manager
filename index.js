@@ -1,17 +1,17 @@
 // Must always use an event listener. Waits until the html page has downloded completely
 
-//document.onDOMContentLoaded = function(){onsole.log("DOM content loaded");}. This will not wor because there is no addEventListener.
-// document.addEventListener("DOMContentLoaded", () => {
+//document.onDOMContentLoaded = function(){console.log("DOM content loaded");}. This will not wor because there is no addEventListener.
+document.addEventListener("DOMContentLoaded", () => {
 
- const form = document.querySelector("form");  // Accesses the form element
+const form = document.querySelector("form");  // Accesses the form element
 
-  const input = document.getElementById("guest-name"); // Access the input element using its Id and assigns it to a variable 
+const input = document.getElementById("guest-name"); // Access the input element using its Id and assigns it to a variable 
 
   // Accesses the guest list <ul> by its ID
   const guestList = document.getElementById("guest-list");
 
   // Add an event listener for when the form is submitted. It has three parameters, the event, what happens after event executed and a third parameter that is optional.
-  form.addEventListener("submit", function (event) {
+    form.addEventListener("submit", function (event) {
      event.preventDefault();
      const guestName = input.value.trim();
 
@@ -48,5 +48,24 @@
         rsvpBtn.style.backgroundColor = "";              // remove background color
       }
     });
+    //Remove Button
+    const removeBtn = document.createElement("button");
+    removeBtn.textContent = "Remove";
+    removeBtn.style.marginLeft = "10px";
+    removeBtn.style.backgroundColor = "#d9534f";
+    removeBtn.style.color = "#fff";
 
-    
+    // Remove the guest when the button is clicked
+    removeBtn.addEventListener("click", () => {
+    guestList.removeChild(li);
+    });
+
+    // Add buttons and guest to the list
+    li.appendChild(rsvpBtn);
+    li.appendChild(removeBtn);
+    guestList.appendChild(li);
+
+    // Clear input for next guest
+    input.value = "";
+});
+});
