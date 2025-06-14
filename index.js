@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", function (event) {
     event.preventDefault(); // Prevents the default form submission behavior
 
-    const guestName = input.value.trim(); // Get the trimmed input value
+  const guestName = input.value.trim(); // Get the trimmed input value
 
     // If the input is empty, exit the function
     if (!guestName) return;
@@ -32,13 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Create a new <li> element for the guest name
-    const li = document.createElement("li");
+  const li = document.createElement("li");
     li.textContent = guestName;
 
     // === RSVP Button ===
 
     // Create the RSVP button
-    const rsvpBtn = document.createElement("button");
+  const rsvpBtn = document.createElement("button");
     rsvpBtn.textContent = "Not Attending";
     rsvpBtn.style.marginLeft = "10px";
 
@@ -53,9 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // === Remove Button ===
+    // Remove Button 
 
-    const removeBtn = document.createElement("button");
+  const removeBtn = document.createElement("button");
     removeBtn.textContent = "Remove";
     removeBtn.style.marginLeft = "10px";
     removeBtn.style.backgroundColor = "#d9534f";
