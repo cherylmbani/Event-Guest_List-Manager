@@ -3,10 +3,10 @@
 
 // This will not work: 
 // document.DOMContentLoaded = function(){ console.log("DOM content loaded"); };
-// Reason: there's no use of addEventListener in that line.
+// Reason: there's no use of addEventListener in that line which hears the event and tells Js to respond through event handling
 
 document.addEventListener("DOMContentLoaded", function(){ // the script is inside the head so to start using JS, the HTML has to be fully loaded
-  //console.log(" i am loaded");
+  //console.log(" i am loaded"); This should be printed if the page is fully loaded before we continue
   const form = document.querySelector("form");  // accesses the form element and storing in the form variable
   const input = document.getElementById("guest-name");   //accessing the input elemnt using its Id and storing it in the input variable
   const guestList = document.getElementById("guest-list"); // Accesses the list denoated by <ul> usinng its Id and stor it in the guestList variable
@@ -53,13 +53,13 @@ document.addEventListener("DOMContentLoaded", function(){ // the script is insid
    removeGuestBtn.style.color = "#fff";
 
    // We add an event, click, that removes a guest from the guest list
-   removeGuestBtn = document.addEventListener("click". function(){
+   removeGuestBtn.addEventListener("click", function(){
     guestList.removeChild(li);
    });
 
    // Now we append the buttons to the list
    li.appendChild(rsvpBtn);
-   li.appendChild(removeBtn);
+   li.appendChild(removeGuestBtn);
 
    // now append the list to the guestList
    guestList.appendChild(li);
